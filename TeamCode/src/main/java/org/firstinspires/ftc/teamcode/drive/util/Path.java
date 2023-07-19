@@ -28,6 +28,6 @@ public class Path {
     }
 
     public boolean finished() {
-        return true;
+        return finished;
     }
 }
