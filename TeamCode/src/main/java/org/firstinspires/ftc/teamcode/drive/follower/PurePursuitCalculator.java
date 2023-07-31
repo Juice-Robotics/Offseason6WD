@@ -1,11 +1,14 @@
 package org.firstinspires.ftc.teamcode.drive.follower;
 
+import com.acmerobotics.dashboard.config.Config;
+
 import org.firstinspires.ftc.teamcode.drive.util.Path;
 import org.firstinspires.ftc.teamcode.drive.util.Pose2d;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 
+@Config
 public class PurePursuitCalculator {
     public static double lookAheadDis = 0.5; //tune
 

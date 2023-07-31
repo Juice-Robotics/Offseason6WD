@@ -1,5 +1,6 @@
 package org.firstinspires.ftc.teamcode.drive.follower;
 
+import com.acmerobotics.dashboard.config.Config;
 import com.qualcomm.robotcore.hardware.DcMotorEx;
 
 import org.firstinspires.ftc.teamcode.drive.util.Path;
@@ -7,6 +8,8 @@ import org.firstinspires.ftc.teamcode.drive.util.Pose2d;
 
 import java.util.ArrayList;
 
+
+@Config
 public class PurePursuitFollower {
     ArrayList<Path> paths;
 
