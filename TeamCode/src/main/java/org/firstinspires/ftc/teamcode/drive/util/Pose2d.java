@@ -1,9 +1,9 @@
 package org.firstinspires.ftc.teamcode.drive.util;
 
 public class Pose2d {
-    private double x;
-    private double y;
-    private double heading; //DEGREES
+    public double x;
+    public double y;
+    public double heading; //DEGREES
 
     public Pose2d(double x, double y, double heading) {
         this.x = x;
@@ -21,5 +21,13 @@ public class Pose2d {
 
     public double getHeading() {
         return heading;
+    }
+
+    public double getHeadingDiff(Pose2d pose2){
+        double turnError = pose2.heading - this.heading;
+        if (turnError > 180 || turnError <-180) {
+            turnError = -1 * java.lang.Math.signum(turnError) * (360 - Math.abs(turnError));
+        }
+        return turnError;
     }
 }
