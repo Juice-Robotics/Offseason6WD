@@ -79,6 +79,8 @@ public class PurePursuitFollower {
         Pose2d lookahead = pp.calculate(path, currentPos);
 
         if (lookahead.heading == currentPos.heading && lookahead.x == currentPos.x && lookahead.y == currentPos.y) {
+            setRightMotors(0);
+            setLeftMotors(0);
             path.setFinished();
             if (async) {
                 paths.remove(0);
